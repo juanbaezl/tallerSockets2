@@ -64,9 +64,12 @@ class Editor extends React.Component {
 
 // Retorna la url del servicio. Es una función de configuración.
 function BBServiceURL() {
-    return '/bbService';
-   }
-   class WSBBChannel {
+    var host = window.location.host;
+    var url = 'wss://' + (host) + '/bbService';
+    console.log("URL Calculada: " + url);
+    return url;
+}
+class WSBBChannel {
     constructor(URL, callback) {
         this.URL = URL;
         this.wsocket = new WebSocket(URL);
