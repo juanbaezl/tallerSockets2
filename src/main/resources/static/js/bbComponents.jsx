@@ -64,7 +64,7 @@ class Editor extends React.Component {
 
 // Retorna la url del servicio. Es una función de configuración.
 function BBServiceURL() {
-    return 'ws://localhost:8080/bbService';
+    return '/bbService';
    }
    class WSBBChannel {
     constructor(URL, callback) {
@@ -96,4 +96,4 @@ function BBServiceURL() {
         this.wsocket.send(msg);
     }
 }
-ReactDOM.render( <Editor name="Daniel"/>, document.getElementById('root'));
+ReactDOM.render( <Editor name="Usuario"/>, document.getElementById('root'));
