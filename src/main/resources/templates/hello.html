@@ -8,6 +8,7 @@
 
 <body>
     <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+    <p>Click <a th:href="@{/tablero}">here</a> to open sketch.</p>
     <form th:action="@{/logout}" method="post">
         <input type="submit" value="Sign Out" />
     </form>
